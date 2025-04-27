@@ -3,14 +3,20 @@
     --color--second: #D4C9BE;
     --color--thirty: #123458;
     --color--fourth: #030303;
+    --color-letter: #929191;
 
-    --abril: "Abril Fatface", sans-serif;
     --inter: "Inter", sans-serif;
-
 }
 
 * {
     background: var(--color-main);
+    font-family: var(--inter);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .changelog {
@@ -19,43 +25,52 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 700px;
 }
 
 .changelog__title {
-    font-family: var(--abril);
     font-size: 48px;
+    font-weight: 400;
 }
 
 .changelog__subtitle {
-    font-family: var(--inter);
-    font-size: 24px;
-    color: var(--color--thirty);
+    font-size: 16px;
+    color: var(--color-letter);
+    font-weight: 400;
 }
 
 .changelog__main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    background: blue;
+    justify-content: center;
     width: 100%;
 }
 
 .changelog__body {
     display: flex;
     flex-direction:column;
+    width: 90%;
+    padding: 20px 0;
+}
+
+.changelog__line {
+    background: var(--color--fourth);
+    width: 2px;
+    height: 400px;
+    left: 201px;
+    position: relative;
 }
 
 .changelog__item {
     display: flex;
-}
-
-.changelog__date, .changelog__description {
-    font-family: var(--inter);
+    align-items: center;
 }
 
 .changelog__date{
     width: 25%;
     text-align: right;
+    color: var(--color-letter);
 }
 
 .changelog__img {
@@ -63,6 +78,7 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
+    margin: 0 35px;
 }
 
 .changelog__button {
